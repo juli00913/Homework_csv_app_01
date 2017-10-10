@@ -15,7 +15,7 @@ class SumsController < ApplicationController
 		end
 		
 	 respond_to do |format|
-	 	format.html { render plain: result.ceil(2)}
+	 	format.html { render plain: '%.2f' % result}
 		end 
 	end
 end
