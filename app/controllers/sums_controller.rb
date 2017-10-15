@@ -14,8 +14,6 @@ class SumsController < ApplicationController
 		result += row[0].to_f
 		end
 		
-	 respond_to do |format|
-	 	format.html { render plain: '%.2f' % result}
-		end 
+	  render plain: '%.2f' % result
 	end
 end
