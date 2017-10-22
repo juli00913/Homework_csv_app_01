@@ -9,7 +9,7 @@ class LinRegressionsController < ApplicationController
  		file = params[:file]
 		file_path = file.path
 	 	linefit = LineFit.new
-		index = 0
+		index = 1
 		x = []
 		y = []
 	  
@@ -20,8 +20,8 @@ class LinRegressionsController < ApplicationController
 		end
 		
 		linefit.setData(x,y)
-		intercept = lineFit.coefficients
-		slope = lineFit.coefficients	
+		intercept, slope = linefit.coefficients
+
 	
 	  	render plain: "%.6f,%.6f"% [slope, intercept] 
 	end
