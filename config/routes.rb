@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 	get 'lin_regressions' => 'lin_regressions#index'
 	post 'lin_regressions' => 'lin_regressions#linear'
 	
-	
+		
 	root 'sums#index'
 	root 'fitlers#index'
 	root 'intervals#index'
